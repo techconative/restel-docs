@@ -4,28 +4,28 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Rapid Automation',
+    Svg: require('@site/static/img/rapid_automation.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Restel was designed from the ground up to be easily installed and
+        run your tests in one click and get results in format that you're familiar.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Open Source',
+    Svg: require('@site/static/img/open_source.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Restel lets you focus on your test modeling, and we&apos;ll do the chores. Model your tests 
+        in Restel's standard input format and forget the woes of automating.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Powered with TestNG & Allure',
+    Svg: require('@site/static/img/allure_testng.svg').default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
