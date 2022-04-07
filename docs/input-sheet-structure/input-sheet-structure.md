@@ -28,9 +28,9 @@ As mentioned earlier, this represents rudimentary APIs that will be called and t
 
 |**Header Name**|**Description**|**format**|**Mandatory**|**Example**|
 | :- | :- | :- | :- | :- |
-|**case\_unique\_name**|Name of the Test Case Definition . Should be unique, duplicate names should not exist.|String|Mandatory|create\_user|
+|**api\_unique\_name**|Name of the Test Case Definition . Should be unique, duplicate names should not exist.|String|Mandatory|create\_user|
 |**depends\_on**|Sometimes other Test\_definitions need to be executed before executing the current Test\_definition . Includes another case\_unique\_name which needs to be executed first. |Comma separated strings|optional|get\_user,login\_user|
-|**case\_description**|Description about the Test\_definition|String|optional|API for fetching the information of all users. |
+|**api\_description**|Description about the Test\_definition|String|optional|API for fetching the information of all users. |
 |**request\_url**|Endpoint of the Rest API|String|Mandatory|/user|
 |**request\_method**|Endpoint Http Method. Should be one of HTTP Methods|String|Mandatory|POST|
 |**request\_headers**|Endpoint Http Request Headers|Json|Optional|{"Content-Type":"application/json","Accept":"application/json"}|
