@@ -24,12 +24,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Powered with TestNG & Allure',
+    title: 'Powered by TestNG & Allure',
     Svg: require('@site/static/img/allure_testng.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Restel is powered by proven tools in test automation domain like TestNG &amp; Allure.  
       </>
     ),
   },
