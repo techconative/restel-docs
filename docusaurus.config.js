@@ -8,13 +8,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Restel',
   tagline: 'No(low) code open-source ReST API automation framework',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://techconative.info',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  organizationName: 'techconative', // Usually your GitHub org/user name.
+  projectName: 'restel-docs', // Usually your repo name.
 
   presets: [
     [
