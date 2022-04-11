@@ -18,7 +18,7 @@ Please install the following dependencies manually
 
 ## Configuring excel:
 
-Sample configuration sheet is available [here](quickstart/jsonbox_test.xlsx).
+Sample configuration sheet is available [here](https://github.com/techconative/Restel/blob/main/quickstart/jsonbox_test.xlsx).
 
 ## Setup :
 
