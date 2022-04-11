@@ -6,24 +6,25 @@ The input excel should be structured as following worksheets,
 
 - *Base_Config:*  Contains global configs that are required for the test. 
 - *Test_Suites:*  Logical grouping of similar test scenarios.
-- *Test_Definitions:* Contains the list of Services API definitions for the Rest Application which needs to test.
-- *Test_Scenarios:* Contains the actual scenarios to be tested. This could make use of one or more APIs defined in the _Test_Definitions_.
+- *Test_Api_Definitions:* Contains the list of Services API definitions for the Rest Application which needs to test.
+- *Test_Scenarios:* Contains the actual scenarios to be tested. This could make use of one or more APIs defined in the _Test_Api_Definitions_.
 
 ## Base_Config:
 
-Base_config sheet, should contain the basic necessary information on the Rest Application which needs to be tested . In the sheets the headers are sectioned in Rows . Each Row first Cell will be a header.
+Base_config sheet, should contain the basic necessary information on the Rest Application which needs to be tested . 
+In the sheets the headers are sectioned in Rows . Each Row first Cell will be a header.
 
 Below Table shows the list of headers, description, format and examples for better understanding.
 
 |**Header Name**|**Description**|**Format**|**Mandatory**|**Examples**|
 | :- | :- | :- | :- | :- |
-|**app\_name**|Give a name to the Rest Application which needs to be Tested. |String|Optional|PetStore Test Application|
+|**app\_name**|Name to the Rest Application which needs to be Tested. |String|Optional|PetStore Test Application|
 |**base\_url**|The URL of the Rest Application which needs to test, should be in the format &ltprotocol&gt://&lthost&gt:&ltport&gt/&ltbase\_path&gt|String|Mandatory|&lthttps://petstore.swagger.io/v2&gt|
 |**default\_headers**|Default headers which will be added to each of the RestAPI request headers which need to be tested. Should be Json format .|Json|Optional|{"Content-Type":"application/json","Accept":"application/json"}|
 
-## Test_Definitions :
+## Test_Api_Definitions :
 
-As mentioned earlier, this represents rudimentary APIs that will be called and tested. The columns and the meaning of the columns in the sheet is as below,
+This represents rudimentary APIs that will be called and tested. The columns and the meaning of the columns in the sheet is as below,
 
 
 |**Header Name**|**Description**|**format**|**Mandatory**|**Example**|
@@ -52,7 +53,7 @@ This represents the logical grouping of similar scenarios.
 | :- | :- | :- | :- | :- |
 |**test\_execution\_unique\_name**|Name of the Test Suite Execution. should be unique. Duplicate names should not exist.   |String|Mandatory|get\_user\_exec|
 |**test\_suite**|The “**case\_unique\_name”** field value read from the Test\_Suite sheets. Need to define that the test execution belongs to which test suite. Eg: *user\_service\_suite.*   This test suite execution belongs to a test suite with suite\_unique\_name as ‘user\_service\_suite’.|String|Mandatory|user\_service\_suite|
-|**test\_case**|The “**case\_unique\_name”** field value read from test\_definition sheets. Need to define that this test execution will be invoking test\_definition provided in this field. Eg: *get\_user* . The test\_definition with ‘get\_user’ case\_unique\_name  will be invoked for testing.|String|Mandatory|get\_user|
+|**test\_apis**|The “**case\_unique\_name”** field value read from test\_definition sheets. Need to define that this test execution will be invoking test\_definition provided in this field. Eg: *get\_user* . The test\_definition with ‘get\_user’ case\_unique\_name  will be invoked for testing.|String|Mandatory|get\_user|
 |**depends\_on**|Sometimes other Test Suite Execution should be invoked before current Test Suite Execution. Name of the *test\_execution\_unique\_name* which should execute first before executioning the current Test Suite Execution. |Comma separated String|Optional|create\_user\_exec|
 |**test\_execution\_params**|Parameters to be included to the current Test suite execution|Json|Optional|{"user\_name" : "Kim"}|
 |**test\_execution\_enable**|To enable or disable invocations of test suite execution . Default : TRUE.|Boolean|Optional|TRUE|

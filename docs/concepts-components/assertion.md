@@ -1,3 +1,7 @@
+---
+title: Assertion
+sidebar_position: 8
+---
 
 The ultimate goal of automation or any testing is to assert the response of the system on various conditions or parameters. Restel's Assertions are defined to validate if the request or response payload has the fields value that we are expecting. For example, If we are passing the payload of one test API to another Test API and want to check if the payload has the fields that we are expecting, in such case restel assertion can be used.
 

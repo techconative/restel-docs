@@ -4,4 +4,12 @@ sidebar_position: 1
 
 # Restel
 
-The Restel framework/tool is used for testing the Restful APIs of an application. Restel framework is a data-driven Automation Testing framework which takes data(APIs which need to be tested), to which you'll have to give the APIs, and scenarios need to be tested in an the excel sheet and get the results through Allure Reports. With the Restel tool we can run API Service Tests, Regression tests, etc.
+Restel is a data-driven, no(low) code test automation framework, which is capable of reading the Rest Service APIs from 
+the spreadsheet and runs it though TestNG test-library and generate allure reports.
+
+Restel lets you to,
+
+- Execute test cases defined in Excel.
+- Have the basic test Excel created from OpenAPI docs.
+- Middleware support to do Oauth(Client-credential and password) and Basic auth login during test case execution.
+- Present the test results as Allure reports.

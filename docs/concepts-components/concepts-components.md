@@ -1,6 +1,11 @@
-The below are some of terms that defined and used within Restel,
+---
+title: Concepts & Components
+sidebar_position: 1
+---
 
-## Test Definition: 
+The below are the terms that defined and used within Restel,
+
+## Test APIs: 
 
 Represents a single APIs that has to be called (and tested).
 

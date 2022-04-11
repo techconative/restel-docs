@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+title: Variables & Context
+sidebar_position: 3
 ---
 
 ## Variables:
