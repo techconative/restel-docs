@@ -14,4 +14,4 @@ The below steps would help you run a demo server and executed tests against it w
 
 - Go to the root folder of the project and run `make setup` to install the dependencies for reporting in your machine.
 - Checkout [Jsonbox](https://github.com/vasanthv/jsonbox) and start the server by running `docker-compose up`.
-- To execute the test, go to the home folder and run, `make demo-run`. You can edit link:jsonbox_test.xlsx[the sample sheet] to play around with the tests.
+- To execute the test, go to the home folder and run, `make demo-run`. You can edit [the sample sheet](https://github.com/techconative/Restel/blob/main/quickstart/jsonbox_test.xlsx) to play around with the tests.
