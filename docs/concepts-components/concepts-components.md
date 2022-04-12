@@ -3,7 +3,7 @@ title: Concepts & Components
 sidebar_position: 1
 ---
 
-The below are the terms that defined and used within Restel,
+The below are the building blocks of Restel.
 
 ## Test APIs/Cases: 
 
@@ -26,24 +26,7 @@ This will be resolved by Restel before the execution of the respective API.
 
 ## Restel Context Map:
 
-In simple terms, this is a map containing the request,responses of the APIs executed that can be referred using variables
-${&ltscenario_name&gt.&lttest_api_name&gt.&ltrequest&gt}
-Restel keeps track of and maintains the request and responses of the tests that has happened as a Map.
-
-The contexts can be referred using variables by giving the fully qualified name of what we are referring to.
-
-For example, say we have an `Test Definition` `some_API` under the `Test Scenario` `some_scenario` and if the response of the API call is,
-
-
-```
-{
-    "name" : "name of the user",
-    "groups" : ["g1", "g2" ,"g3"]
-}
-```
-- If we want to refer a field 'name' from the response of the api in some other test, we can refer it as `${some_scenario.some_API.response.name}`.
-
-- If we want to refer to the first groups in the response, we can do it as `${some_scenario.some_API.response.groups[0]}`. 
+In simple terms, this is a map containing the request,responses and other details that Restel keeps tracks of and stores as the API tests are getting executed.
 
 > More details can be found [here](variables_and_context#context).
 

@@ -26,7 +26,7 @@ At this moment we Restel supports three request middleware:
 
 If you're dealing with APIs that supports BasicAuth then you should probably use this middleware which adds Authorization header to the request headers with the given username and password.
 
-This middleware adds the header `Authorization: Basic <token>` to the request, where token is the Base64 encoding of username:password 
+This middleware adds the header `Authorization: Basic <token>` to the request, where token is the Base64 encoding of `username:password`. 
 
 ```
 {
