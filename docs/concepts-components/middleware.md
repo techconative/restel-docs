@@ -13,7 +13,7 @@ In test definition sheet two columns are earmarked for middleware as follows:
 * **request_pre_call_hook** 
 * **request_post_call_hook**
 
-as the name suggests former one is used for pre processing and the later is used in post processing. Wondering what kind of processing would require while testing? We often bump into the requirements of storing the response into a file for debugging or for comparisons and the most important aspect in today's context is authentication & authorization. 
+as the name suggests former one is used for pre-processing and the later is used in post processing. Wondering what kind of processing would require while testing? We often bump into the requirements of storing the response into a file for debugging or for comparisons and the most important aspect in today's context is authentication & authorization. 
 
 ### Request Middleware
 At this moment we Restel supports three request middleware:
@@ -23,14 +23,17 @@ At this moment we Restel supports three request middleware:
 * Oauth2 Resource Owner Password Middleware
 
 ### BasicAuth Middleware
-If you're dealing with APIs that supports BasicAuth then you should probably use this middleware it adds Authorization header to the request headers with the given username and password. Header Key : Authorization , Value : Basic &lttoken&gt . Where token is the Base64 encoding of username:password 
+
+If you're dealing with APIs that supports BasicAuth then you should probably use this middleware which adds Authorization header to the request headers with the given username and password.
+
+This middleware adds the header `Authorization: Basic <token>` to the request, where token is the Base64 encoding of username:password 
 
 ```
 {
   "Authorization": {
 	"basic_auth": {
-  	"username": "&ltusername&gt",
-    	"password": "&ltpassword&gt"
+  	"username": "<username>",
+    	"password": "<password>"
 	}
   }
 }
@@ -50,10 +53,10 @@ OAuth based authentication has become a de facto standard for most of the applic
   "Authorization": {
 	"oauth2": {
   	"client_credentials": {
-    	"authUrl": "&ltauth_url&gt",
-    	"clientId": "&ltclient_id&gt",
-    	"clientSecret": "&ltclientSecret&gt",
-    	"scope": "&ltScopes&gt"
+    	"authUrl": "<auth_url>",
+    	"clientId": "<client_id>",
+    	"clientSecret": "<clientSecret>",
+    	"scope": "<Scopes>"
   	}
 	}
   }
@@ -77,12 +80,12 @@ If you're using resource owner password while invoking the application then use 
   "Authorization": {
 	"oauth2": {
   	"password": {
-    	"username": "&ltusername&gt",
-    	"password": "&ltpassword&gt",
-"authUrl": "&ltauth_url&gt",
-    	"clientId": "&ltclient_id&gt",
-    	"clientSecret": "&ltclientSecret&gt",
-    	"scope": "&ltScopes&gt"
+    	"username": "<username>",
+    	"password": "<password>",
+    	"authUrl": "<auth_url>",
+    	"clientId": "<client_id>",
+    	"clientSecret": "<clientSecret>",
+    	"scope": "<Scopes>"
   	}
 	}
   }
@@ -107,6 +110,6 @@ If you want required to record the response in a file then use this middleware i
 
 ```
 {
-  "write": “&ltfilePath&gt”
+  "write": “<filePath>”
 }
 ```

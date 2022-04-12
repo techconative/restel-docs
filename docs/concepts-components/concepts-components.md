@@ -5,41 +5,35 @@ sidebar_position: 1
 
 The below are the terms that defined and used within Restel,
 
-## Test APIs: 
+## Test APIs/Cases: 
 
 Represents a single APIs that has to be called (and tested).
 
 ## Test Scenarios:
 
-Scenarios that are to be tested, typically making use of one or more Test Definitions.
+Scenarios that are to be tested, typically making use of one or more Test APIs.
 
 ## Test Suite:
 
-Logical collection of Test scenarios.
+Logical collection of related Test scenarios.
 
-## Restel Expression:
+## Restel Variables:
 
-Anything valid expression that is understandable and executed by Restel framework, will be in the format of `${}`.
+Any valid expression that is understandable and executed by Restel framework, will be in the format of `${}`.
+This will be resolved by Restel before the execution of the respective API.
 
-## Test Context Map:
+> More details available [here](variables_and_context#variables).
 
-Restel tracks the request and responses of the tests that has happened as a Map. This can be referred within tests, when we need to refer to values from other tests that has been executed.
+## Restel Context Map:
 
-## Variables:
-
-Restel supports variables, which gives certain amount of dynamicity to the test definition in Restel, like referring to the request/response of some other request.
-
-Variables are referred using `${<fully_qualified_variable_name>}`. The variables are supported in almost all the fields of test/scenario definitions. The evaluation of the value happens just before the execution of the respective tests.
-
-## Context:
-
-Context is a map of values maintained by Restel while the test is being executed,
-
-Restel tracks all the requests and responses within the context.
+In simple terms, this is a map containing the request,responses of the APIs executed that can be referred using variables
+${&ltscenario_name&gt.&lttest_api_name&gt.&ltrequest&gt}
+Restel keeps track of and maintains the request and responses of the tests that has happened as a Map.
 
 The contexts can be referred using variables by giving the fully qualified name of what we are referring to.
 
 For example, say we have an `Test Definition` `some_API` under the `Test Scenario` `some_scenario` and if the response of the API call is,
+
 
 ```
 {
@@ -49,7 +43,9 @@ For example, say we have an `Test Definition` `some_API` under the `Test Scenari
 ```
 - If we want to refer a field 'name' from the response of the api in some other test, we can refer it as `${some_scenario.some_API.response.name}`.
 
-- If we want to refer to the first groups in the response, we can do it as `${some_scenario.some_API.response.groups[0]}`.
+- If we want to refer to the first groups in the response, we can do it as `${some_scenario.some_API.response.groups[0]}`. 
+
+> More details can be found [here](variables_and_context#context).
 
 ## Middlewares:
 
