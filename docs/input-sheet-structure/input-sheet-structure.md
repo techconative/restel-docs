@@ -52,7 +52,7 @@ This represents the logical grouping of similar scenarios.
 |**Header Name**|**Description**|**Format**|**Mandatory**|**Examples**|
 | :- | :- | :- | :- | :- |
 |**scenario\_unique\_name**|Name of the Test Suite Execution. should be unique. Duplicate names should not exist.   |String|Mandatory|get\_user\_exec|
-|**scenario_description**|The “**description”** of the test scenario to communicate the details to the users and to be logged in the report.|String|Mandatory| Scenario to test if the user fetch fails after deletion.|
+|**scenario_description**|The “**description”** of the test scenario to communicate the details to the users and to be logged in the report.|String|Optional| Scenario to test if the user fetch fails after deletion.|
 |**test\_suite**|The “**suite\_unique\_name”** field value read from the Test\_Suite sheets. Need to define that the test execution belongs to which test suite. Eg: *user\_service\_suite.*   This test suite execution belongs to a test suite with suite\_unique\_name as ‘user\_service\_suite’.|String|Mandatory|user\_service\_suite|
 |**test\_apis**|Comma seperated values of the apis to be executed, in order. “**case\_unique\_name”** field value read from test\_definition sheets.|String|Mandatory|get\_user|
 |**depends\_on**|Sometimes other Test Scenario Execution should be invoked before current Test Suite Execution. Name of the *case\_unique\_name* which should execute first before executing the current Test Suite Execution. |Comma separated String|Optional|create\_user\_exec|
