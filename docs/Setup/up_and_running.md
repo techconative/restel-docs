@@ -9,12 +9,18 @@ sidebar_position: 1
 - Java-11
 - Make file support
 
-### For systems where the given Makefile doesn't work:
+### For Windows and systems where the given Makefile doesn't work:
 
 Please install the following dependencies manually
 
 - Java-11
 - [Allure](https://docs.qameta.io/allure/#_installing_a_commandline)
+
+Windows users can install allure using scoop:
+
+```
+scoop install allure
+```
 
 ## Configuring excel:
 
@@ -41,8 +47,16 @@ Once the spreadsheet file path is configured, run the main class `RestelApplicat
 
 *Command to run* :
 
+*nix:
+
 `sh scripts/run.sh  <excel file path>.`
 
-This script will install allure-commandline to view the reports in browser and give your restel excel file as input
+Windows:
 
-eg:  `sh scripts/run.sh  quickstart/jsonbox_test.xlsx`
+`.\scripts\run.bat <excel file path>`
+
+This script when given your restel excel file as input will run the tests and use `allure` CLI tool to generate and display the reports in a browser. e.g.,:
+
+*nix: `sh scripts/run.sh  quickstart/jsonbox_test.xlsx`
+
+Windows: `.\scripts\run.bat quickstart\jsonbox_test.xlsx`
