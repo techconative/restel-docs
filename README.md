@@ -1,20 +1,21 @@
-# Website
+# Restel Documentation
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Documentation repository for the no(low)code test automation framework [Restel](https://github.com/techconative/Restel).
 
 ### Installation
 
+After cloning this repository, setup dependencies:
 ```
 $ yarn
 ```
 
-### Local Development
+### Start local development server
 
 ```
 $ yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server and opens up a browser window. Changes are reflected live without having to refresh page or restart the server.
 
 ### Build
 
@@ -39,3 +40,5 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.

@@ -3,15 +3,32 @@ title: Demo
 sidebar_position: 2
 ---
 
-The below steps would help you run a demo server and executed tests against it with a pre-written test spreadsheet.
+The below steps would help you get a feel of Restel by running a demo server and test it with a pre-written excel file.
 
-## Pre-requisite:
+## Pre-requisite
 
-- Unix/linux/Mac environment (Sorry at the moment, you will have to install the dependencies manually in windows).
-- Docker.
+- Docker
+- [JsonBox](https://github.com/vasanthv/jsonbox)
 
-## Quickstart:
+## Quickstart
 
-- Go to the root folder of the project and run `make setup` to install the dependencies for reporting in your machine.
-- Checkout [Jsonbox](https://github.com/vasanthv/jsonbox) and start the server by running `docker-compose up`.
-- To execute the test, go to the home folder and run, `make demo-run`. You can edit [the sample sheet](https://github.com/techconative/Restel/blob/main/quickstart/jsonbox_test.xlsx) to play around with the tests.
+You can edit [the sample sheet](https://github.com/techconative/Restel/blob/main/quickstart/jsonbox_test.xlsx) under *quickstart* directory to play around with the tests being executed.
+
+#### *nix
+
+1. Go to the root folder of the project and run `make setup` to install the dependencies for reporting in your machine.
+2. Checkout [Jsonbox](https://github.com/vasanthv/jsonbox) and start the server by running `docker-compose up`.
+3. To execute the test, go to the home folder and run, `make demo-run`.
+
+#### Windows 
+
+1. Refer [Setup section](up_and_running#for-windows-and-systems-where-the-given-makefile-doesnt-work) on steps to manually setup dependencies.
+2. Checkout [Jsonbox](https://github.com/vasanthv/jsonbox) by running `docker-compose up`
+3. To execute the test, go to the home directory and run,
+```
+.\scripts\run.bat quickstart\jsonbox_test.xlsx
+```
+
+---
+### Note
+> If `docker-compose` is not working for JsonBox, please refer to the [instruction](https://github.com/vasanthv/jsonbox#how-to-run-locally) in jsonbox to have it up & running.
