@@ -29,21 +29,21 @@ This represents rudimentary APIs that will be called and tested. The columns and
 
 |**Header Name**|**Description**|**format**|**Mandatory**|**Example**|
 | :- | :- | :- | :- | :- |
-|**api\_unique\_name**|Name of the Test Case Definition . Should be unique, duplicate names should not exist.|String|Mandatory|create\_user|
-|**depends\_on**|Sometimes other Test\_definitions need to be executed before executing the current Test\_definition . Includes another case\_unique\_name which needs to be executed first. |Comma separated strings|optional|get\_user,login\_user|
+|**api\_unique\_name**|Name of the Test Case Definition. Should be unique, duplicate names should not exist.|String|Mandatory|create\_user|
+|**depends\_on**|Sometimes other Test\_definitions need to be executed before executing the current Test\_definition. Includes another case\_unique\_name which needs to be executed first. |Comma separated strings|optional|get\_user,login\_user|
 |**api\_description**|Description about the Test\_definition|String|optional|API for fetching the information of all users. |
-|**request\_url**|Endpoint of the Rest API|String|Mandatory|/user|
+|**request\_url**|Endpoint of the Rest API. Supports Restel variables. |String|Mandatory|/user|
 |**request\_method**|Endpoint Http Method. Should be one of HTTP Methods|String|Mandatory|POST|
 |**request\_headers**|Endpoint Http Request Headers|Json|Optional|{"Content-Type":"application/json","Accept":"application/json"}|
 |**request\_query\_params**|Query parameters for this endpoint|Json|Optional|{"user:"Tom","index":2}|
-|**request\_body\_params**|&ltp&gtEndpoint Body parameters .&lt/p&gt&ltp&gtFormat can be json or String. Provide the appropriate Content-Type in the request\_headers . &lt/p&gt|Json / String|Optional|{"id": 1,"email": "noreply@gmail.com","phone": "99999999999"}|
-|**request\_pre\_call\_hook**|middlewares on request before api call like authentications,etc   |Json|optional|{}|
-|**request\_post\_call\_hook**|middlewares on request after api call like writing response to file,etc|Json|optional|{}|
-|**expected\_response**|The API call response body to be expected, Will evaluate expected response body with the actual api call response body. Should provide the appropriate response content-type in the response headers .  |Json/String|Optional|{ "id": 1,"email": "noreply@gmail.com","phone": "99999999999"}|
-|**expected\_response\_matcher**|Evaluation technique names.Will evaluate the api  response body with expected\_response body. should be one of the enums [NOOP\_MATCHER,EXACT\_MATCHER,PARTIAL\_MATCHER] |Enum of [NOOP\_MATCHER,EXACT\_MATCHER,PARTIAL\_MATCHER]|Mandatory|EXACT\_MATCHER|
+|**request\_body\_params**|Endpoint Body parameters. Format can be json or String. Provide the appropriate Content-Type in the request\_headers. Supports Restel variables. |Json / String|Optional|{"id": 1,"email": "noreply@gmail.com","phone": "99999999999"}|
+|**request\_pre\_call\_hook**|Middlewares on request before api call like authentications, etc. |Json|optional|{}|
+|**request\_post\_call\_hook**|Middlewares on request after api call like writing response to file,etc|Json|optional|{}|
+|**expected\_response**|The API call response body to be expected, Will evaluate expected response body with the actual api call response body. Should provide the appropriate response content-type in the response headers. Supports Restel variables. |Json/String|Optional|{ "id": 1,"email": "noreply@gmail.com","phone": "99999999999"}|
+|**expected\_response\_matcher**|Evaluation technique names. Will evaluate the api response body with expected\_response body. Should be one of the enums [NOOP\_MATCHER,EXACT\_MATCHER,PARTIAL\_MATCHER] |Enum of [NOOP\_MATCHER,EXACT\_MATCHER,PARTIAL\_MATCHER]|Mandatory|EXACT\_MATCHER|
 |**expected\_header**|The API call response headers to be expected.Will evaluate expected response header with the actual api call response header.  |Json|Optional|{"Content-Type":"application/json","Server":"Jetty"}|
-|**expected\_header\_matcher**|Evaluation technique names.Will evaluate the api response header with expected\_response header. should be one of the enums [NOOP\_MATCHER,EXACT\_MATCHER,PARTIAL\_MATCHER] |Enum of [NOOP\_MATCHER,EXACT\_MATCHER,PARTIAL\_MATCHER]|Mandatory|NOOP\_MATCHER|
-|**accepted\_status\_code**|To validate/check if the api call status code is within the one of the accepted\_status\_code. Should be one or list of status codes |Comma separated numbers|Mandatory|201|
+|**expected\_header\_matcher**|Evaluation technique names.  Will evaluate the api response header with expected\_response header. should be one of the enums [NOOP\_MATCHER,EXACT\_MATCHER,PARTIAL\_MATCHER] |Enum of [NOOP\_MATCHER,EXACT\_MATCHER,PARTIAL\_MATCHER]|Mandatory|NOOP\_MATCHER|
+|**accepted\_status\_code**|To validate/check if the api call status code is within the one of the accepted\_status\_code. Should be one or list of status codes. Supports Restel variables. |Comma separated values|Mandatory|201|
 |**Tags**|Can give tags to Test\_Definition.|Comma separated String|Optional|UserService|
 
 ## Test_Scenarios:
@@ -51,7 +51,7 @@ This represents the logical grouping of similar scenarios.
 
 |**Header Name**|**Description**|**Format**|**Mandatory**|**Examples**|
 | :- | :- | :- | :- | :- |
-|**scenario\_unique\_name**|Name of the Test Suite Execution. should be unique. Duplicate names should not exist.   |String|Mandatory|get\_user\_exec|
+|**scenario\_unique\_name**|Name of the Test Suite Execution. Should be unique. Duplicate names should not exist.   |String|Mandatory|get\_user\_exec|
 |**scenario_description**|The “**description”** of the test scenario to communicate the details to the users and to be logged in the report.|String|Optional| Scenario to test if the user fetch fails after deletion.|
 |**test\_suite**|The “**suite\_unique\_name”** field value read from the Test\_Suite sheets. Need to define that the test execution belongs to which test suite. Eg: *user\_service\_suite.*   This test suite execution belongs to a test suite with suite\_unique\_name as ‘user\_service\_suite’.|String|Mandatory|user\_service\_suite|
 |**test\_apis**|Comma seperated values of the apis to be executed, in order. “**case\_unique\_name”** field value read from test\_definition sheets.|String|Mandatory|get\_user|
