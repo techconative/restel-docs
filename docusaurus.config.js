@@ -23,7 +23,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       {
         googleAnalytics: {
-          trackingID: 'G-7VND45MMVE'
+          trackingID: 'G-7VND45MMVE',
+          anonymizeIP: true,
+        },
+        gtag: {
+          trackingID: 'G-7VND45MMVE',
+          anonymizeIP: true,
         },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
