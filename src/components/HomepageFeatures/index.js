@@ -20,6 +20,7 @@ const FeatureList = [
       <>
         Restel lets you focus on your test modeling, and we&apos;ll do the chores. Model your tests 
         in Restel's standard input format and forget the woes of automating.
+        Conceptualized by <a href='https://techconative.com' target="_blank">TechConative</a>.
       </>
     ),
   },
