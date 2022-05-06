@@ -17,7 +17,7 @@ The order of resolution for a given key is,
 
 - Restel context
 - Environment
-- System
+- JVM System property
 
 ## Params:
 
