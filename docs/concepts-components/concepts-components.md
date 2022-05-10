@@ -9,6 +9,10 @@ The below are the building blocks of Restel.
 
 Represents a single APIs that has to be called (and tested).
 
+## Test Wrapper:
+
+Represents a wrapper for a Test API Intended to pass API specific **Restel Variables** to customise the expected response, status code of the API.
+
 ## Test Scenarios:
 
 Scenarios that are to be tested, typically making use of one or more Test APIs.
@@ -26,7 +30,7 @@ This will be resolved by Restel before the execution of the respective API.
 
 ## Restel Context Map:
 
-In simple terms, this is a map containing the request,responses and other details that Restel keeps tracks of and stores as the API tests are getting executed.
+In simple terms, this is a map containing the request, responses and other details that Restel keeps tracks of and stores as the API tests are getting executed.
 
 > More details can be found [here](variables_and_context#context).
 
