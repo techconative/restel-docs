@@ -11,11 +11,13 @@ Represents a single APIs that has to be called (and tested).
 
 ## Test Wrapper:
 
-Represents a wrapper for a Test API Intended to pass API specific **Restel Variables** to customise the expected response, status code of the API.
+Represents a wrapper for a Test API. Intended to pass API specific **Restel Variables** to customise the API's expected response, status code, etc.
+
+In the context of *Test Scenario*, wrappers can be used interchangeably with Test APIs. We go with wrappers when we have to pass different parameters for the same Test APIs hence performing different set of tests using the same API.
 
 ## Test Scenarios:
 
-Scenarios that are to be tested, typically making use of one or more Test APIs.
+Scenarios that are to be tested, typically making use of one or more Test APIs or Test wrappers.
 
 ## Test Suite:
 
