@@ -3,7 +3,15 @@ title: Demo
 sidebar_position: 2
 ---
 
+# Quickstart
+
 The below steps would help you get a feel of Restel by running a demo server and test it with a pre-written excel file.
+
+You can quick start by either:
+ 1. [Cloning the git repository](#cloning-the-git-repository)
+ 2. [Downloading the required files from repo (without entire setup)](#downloading-the-required-files-from-repo-without-entire-setup)
+ 
+You can edit [the sample sheet](https://github.com/techconative/Restel/blob/main/quickstart/jsonbox_test.xlsx) to play around with the tests being executed.
 
 ## Cloning the git repository
 
@@ -12,10 +20,8 @@ The below steps would help you get a feel of Restel by running a demo server and
 - Docker
 - [JsonBox](https://github.com/vasanthv/jsonbox)
 
-### Quickstart
 
-You can edit [the sample sheet](https://github.com/techconative/Restel/blob/main/quickstart/jsonbox_test.xlsx) under *quickstart* directory to play around with the tests being executed.
-
+### Steps to follow
 #### *nix
 
 1. Go to the root folder of the project and run `make setup` to install the dependencies for reporting in your machine.
@@ -35,7 +41,7 @@ You can edit [the sample sheet](https://github.com/techconative/Restel/blob/main
 
 ---
 
-## Download Latest Release JAR
+## Downloading the required files from repo (without entire setup)
 
 ### Pre-requisite
 - JRE 11
@@ -44,7 +50,7 @@ You can edit [the sample sheet](https://github.com/techconative/Restel/blob/main
 - Docker + [JsonBox](https://github.com/vasanthv/jsonbox)
 - [Allure CLI](https://docs.qameta.io/allure/#_installing_a_commandline)
 
-### Quickstart steps
+### Steps to follow
 
 1. Download the Restel JAR and quickstart Excel file into a directory.
 2. Verify that Jsonbox is running.
