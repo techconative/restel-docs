@@ -13,7 +13,7 @@ Represents a single APIs that has to be called (and tested).
 
 Represents a wrapper for a Test API. Intended to pass API specific **Restel Variables** to customise the API's expected response, status code, etc.
 
-In the context of *Test Scenario*, wrappers can be used interchangeably with Test APIs. We go with wrappers when we have to pass different parameters for the same Test APIs hence performing different set of tests using the same API.
+In the context of *Test Scenario*, wrappers can be used interchangeably with Test APIs. We go with wrappers when we have to pass different set of parameters for the same Test APIs hence performing different set of tests using the same API.
 
 ## Test Scenarios:
 
